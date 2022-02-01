@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Manverse;
+  src: url("/fonts/ManverseNormal.ttf");
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v21/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v21/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
+}
+body {
+  background: linear-gradient(90deg, #152331 0%, #000000 100%);
+  font-family: Manverse, sans-serif;
+  overflow: hidden;
+}
+body #content img {
+  position: absolute;
+  right: -5%;
+}
+body #content .bigFont {
+  font-size: 100px;
+  line-height: 87px;
+  letter-spacing: 0.195em;
+  color: white;
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  text-align: right;
+}
+body #content .bigFont div {
+  margin-bottom: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+body #content .bigFont div:first-child {
+  margin-left: 8%;
+  padding-left: 5%;
+  border-left: 11px solid #51E8EF;
+}
+body #content #rightBubble {
+  position: absolute;
+  right: -16%;
+  top: 18%;
+}
+body #content #leftBubble {
+  position: absolute;
+  left: -18%;
+  top: -15%;
+  width: 37%;
+  z-index: -1;
+  filter: blur(5px);
+}
+body #content #circleText {
+  position: absolute;
+  left: -10%;
+  top: 24%;
+  z-index: -2;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5%;
+}
+header img:nth-child(2) {
+  margin-right: auto;
+  margin-left: auto;
+}
+header img:first-child {
+  margin-left: 1.5%;
+  cursor: pointer;
+}
+.buttonHeader {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.195em;
+  padding: 12px 25px;
+  border: 2px solid #51E8EF;
+  margin-right: 1.5%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.buttonHeader:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+footer .buttonHeader {
+  font-size: 20px;
+  line-height: 17px;
+  letter-spacing: 0.195em;
+  margin-right: 0;
+  padding: 12px 5px;
+}
+footer .text {
+  transform: rotate(90deg);
+  color: white;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.195em;
+  font-family: 'Montserrat', sans-serif;
+}
+/*# sourceMappingURL=mainPage.css.map */

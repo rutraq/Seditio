@@ -1,0 +1,122 @@
+@import "variables";
+
+body {
+  background: linear-gradient(90deg, #152331 0%, #000000 100%);
+  font-family: @manverseFont;
+  overflow: hidden;
+
+  #content {
+    img {
+      position: absolute;
+      right: -5%;
+    }
+
+    .bigFont {
+      font-size: 100px;
+      line-height: 87px;
+      letter-spacing: 0.195em;
+      color: white;
+      position: absolute;
+      top: 40%;
+      right: 40%;
+      text-align: right;
+
+      div {
+        margin-bottom: 5%;
+        font-family: @montseratFont;
+        font-weight: 900;
+      }
+
+      div:first-child {
+        margin-left: 8%;
+        padding-left: 5%;
+        border-left: 11px solid #51E8EF;
+      }
+    }
+
+    #rightBubble {
+      position: absolute;
+      right: -16%;
+      top: 18%;
+    }
+
+    #leftBubble {
+      position: absolute;
+      left: -18%;
+      top: -15%;
+      width: 37%;
+      z-index: -1;
+      filter: blur(5px);
+    }
+
+    #circleText {
+      position: absolute;
+      left: -10%;
+      top: 24%;
+      z-index: -2;
+    }
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.5%;
+
+
+  img {
+
+    &:nth-child(2) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &:first-child {
+      margin-left: 1.5%;
+      cursor: pointer;
+    }
+  }
+}
+
+.buttonHeader {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.195em;
+  padding: 12px 25px;
+  border: 2px solid #51E8EF;
+  margin-right: 1.5%;
+  cursor: pointer;
+  transition: .4s;
+
+  &:hover {
+    transform: scale(1.03);
+    transition: .3s;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+
+  .buttonHeader {
+    font-size: 20px;
+    line-height: 17px;
+    letter-spacing: 0.195em;
+    margin-right: 0;
+    padding: 12px 5px;
+  }
+
+  .text {
+    transform: rotate(90deg);
+    color: white;
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.195em;
+    font-family: @montseratFont;
+  }
+}
