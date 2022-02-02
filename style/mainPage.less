@@ -5,6 +5,10 @@ body {
   font-family: @manverseFont;
   overflow: hidden;
 
+  #article1 {
+    height: 100vh;
+  }
+
   #content {
     img:first-child {
       position: absolute;
@@ -118,8 +122,8 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 80%;
   display: flex;
   flex-direction: row;
 
@@ -128,7 +132,9 @@ body {
     line-height: 17px;
     letter-spacing: 0.195em;
     margin-right: 0;
-    padding: 12px 5px;
+    padding: 15px 65px;
+    position: absolute;
+    left: 38%;
   }
 
   .text {
@@ -138,5 +144,11 @@ body {
     line-height: 14px;
     letter-spacing: 0.195em;
     font-family: @montseratFont;
+    position: absolute;
+    right: -1%;
   }
+}
+
+#article2 {
+  height: 100vh;
 }

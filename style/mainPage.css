@@ -21,6 +21,9 @@ body {
   font-family: Manverse, sans-serif;
   overflow: hidden;
 }
+body #article1 {
+  height: 100vh;
+}
 body #content img:first-child {
   position: absolute;
   right: -5%;
@@ -115,8 +118,8 @@ body #content #circleText {
   transition: 0.3s;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 80%;
   display: flex;
   flex-direction: row;
 }
@@ -125,7 +128,9 @@ body #content #circleText {
   line-height: 17px;
   letter-spacing: 0.195em;
   margin-right: 0;
-  padding: 12px 5px;
+  padding: 15px 65px;
+  position: absolute;
+  left: 38%;
 }
 .footer .text {
   transform: rotate(90deg);
@@ -134,5 +139,10 @@ body #content #circleText {
   line-height: 14px;
   letter-spacing: 0.195em;
   font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  right: -1%;
+}
+#article2 {
+  height: 100vh;
 }
 /*# sourceMappingURL=mainPage.css.map */
