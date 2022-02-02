@@ -11,7 +11,7 @@ body {
       right: -5%;
     }
 
-    .bigFont {
+    .bigFont, .borderFont {
       font-size: 100px;
       line-height: 87px;
       letter-spacing: 0.195em;
@@ -31,6 +31,23 @@ body {
         margin-left: 8%;
         padding-left: 5%;
         border-left: 11px solid #51E8EF;
+      }
+    }
+
+    .borderFont {
+      top: 55%;
+      right: 55%;
+      -webkit-text-stroke-color: #1E2832;
+      -webkit-text-stroke-width: 1px;
+      color: transparent;
+      z-index: -1;
+
+      div {
+        font-family: sans-serif;
+
+        &:first-child {
+          border-left: none;
+        }
       }
     }
 

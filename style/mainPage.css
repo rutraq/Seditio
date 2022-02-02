@@ -25,7 +25,8 @@ body #content img {
   position: absolute;
   right: -5%;
 }
-body #content .bigFont {
+body #content .bigFont,
+body #content .borderFont {
   font-size: 100px;
   line-height: 87px;
   letter-spacing: 0.195em;
@@ -35,15 +36,31 @@ body #content .bigFont {
   right: 40%;
   text-align: right;
 }
-body #content .bigFont div {
+body #content .bigFont div,
+body #content .borderFont div {
   margin-bottom: 5%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
-body #content .bigFont div:first-child {
+body #content .bigFont div:first-child,
+body #content .borderFont div:first-child {
   margin-left: 8%;
   padding-left: 5%;
   border-left: 11px solid #51E8EF;
+}
+body #content .borderFont {
+  top: 55%;
+  right: 55%;
+  -webkit-text-stroke-color: #1E2832;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  z-index: -1;
+}
+body #content .borderFont div {
+  font-family: sans-serif;
+}
+body #content .borderFont div:first-child {
+  border-left: none;
 }
 body #content #rightBubble {
   position: absolute;
