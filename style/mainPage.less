@@ -6,9 +6,10 @@ body {
   overflow: hidden;
 
   #content {
-    img {
+    img:first-child {
       position: absolute;
       right: -5%;
+      width: 85%;
     }
 
     .bigFont, .borderFont {
@@ -55,6 +56,7 @@ body {
       position: absolute;
       right: -16%;
       top: 18%;
+      width: 60%;
     }
 
     #leftBubble {
@@ -71,11 +73,12 @@ body {
       left: -10%;
       top: 24%;
       z-index: -2;
+      width: 28%;
     }
   }
 }
 
-header {
+.header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,7 +117,7 @@ header {
   }
 }
 
-footer {
+.footer {
   position: absolute;
   bottom: 0;
   display: flex;
