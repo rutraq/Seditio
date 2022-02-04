@@ -7,14 +7,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v21/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v21/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
 }
 body {
   background: linear-gradient(90deg, #152331 0%, #000000 100%);
@@ -92,10 +92,15 @@ body #content #circleText {
   flex-direction: row;
   align-items: center;
   margin-top: 1.5%;
+  width: 100vw;
+}
+.header.fix {
+  position: fixed;
+  width: 100vw;
 }
 .header img:nth-child(2) {
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 35%;
+  margin-left: 45%;
 }
 .header img:first-child {
   margin-left: 1.5%;
@@ -109,7 +114,6 @@ body #content #circleText {
   letter-spacing: 0.195em;
   padding: 12px 25px;
   border: 2px solid #51E8EF;
-  margin-right: 1.5%;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -144,5 +148,82 @@ body #content #circleText {
 }
 #article2 {
   height: 100vh;
+  position: relative;
+}
+#article2 #centerBubble {
+  position: relative;
+  width: 100%;
+  bottom: -100%;
+  left: 3%;
+  z-index: -1;
+}
+#article2 #centerBubble.rotation {
+  transition: 2s;
+  transform: rotate(-150deg);
+  bottom: 150%;
+}
+#article2 #nftImg {
+  position: absolute;
+  height: 70%;
+  right: 0;
+  opacity: 0;
+  top: -80%;
+}
+#article2 #smart {
+  position: absolute;
+  height: 8%;
+  top: 50%;
+  opacity: 0;
+  right: 0;
+}
+#article2 #future {
+  position: absolute;
+  height: 8%;
+  top: 64%;
+  opacity: 0;
+  right: 47%;
+}
+#article2 #new {
+  position: absolute;
+  height: 8%;
+  top: 76%;
+  opacity: 0;
+  right: -5%;
+}
+#article2 #trends {
+  position: absolute;
+  height: 8%;
+  top: 88%;
+  opacity: 0;
+  right: 49%;
+}
+#article2 #seditio {
+  position: absolute;
+  top: -30%;
+  left: 8%;
+  height: 10%;
+  opacity: 0;
+}
+#article2 #text {
+  position: absolute;
+  top: -30%;
+  left: 9%;
+  height: 6%;
+  opacity: 0;
+}
+#article2 #line {
+  position: absolute;
+  top: -30%;
+  left: 8%;
+  height: 10%;
+  opacity: 0;
+}
+#article2 #readMore {
+  position: absolute;
+  top: -30%;
+  left: 9%;
+  height: 2%;
+  cursor: pointer;
+  opacity: 0;
 }
 /*# sourceMappingURL=mainPage.css.map */
