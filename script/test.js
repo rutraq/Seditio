@@ -37,6 +37,7 @@ $( "#borderFont" ).animate({
 
 
 
+
 // $( "#leftBubble" ).animate({
 //     top: '100%',
 //     left: '20%'
