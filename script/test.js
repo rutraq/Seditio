@@ -35,31 +35,12 @@ $( "#borderFont" ).animate({
 }, 1000, function() {
 });
 
-
-
-
-// $( "#leftBubble" ).animate({
-//     top: '100%',
-//     left: '20%'
-// }, 0, function() {
-// }).animate({
-//     top: '-=114%',
-//     left: '-=38%'
-// }, 2000, function() {
-// });
-
-
-
-
-
-
-    // .animate(
-    //     { deg: 180 },
-    //     {
-    //         left: '+=20%',
-    //         duration: 5000,
-    //         step: function(now) {
-    //             $(this).css({ transform: 'rotate(' + now + 'deg)' });
-    //         }
-    //     }
-    // );
+$( "#rightBubble" ).animate({
+    right: '5%',
+    top: '-110%'
+}, 0, function() {
+}).animate({
+    top: '+=121%',
+    right: '-=21%'
+}, 2000, function() {
+});
