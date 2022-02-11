@@ -71,6 +71,7 @@ body #content #rightBubble {
   right: -16%;
   top: 18%;
   width: 60%;
+  opacity: 0;
 }
 body #content #leftBubble {
   position: absolute;
@@ -246,17 +247,13 @@ body #content #circleText {
   width: 125%;
   z-index: -1;
 }
-#article2 #bigBubble.rotation {
-  transition: 2s;
-  transform: rotate(150deg);
-  left: 35%;
-}
 #article2 #photoBlock1 {
   left: 15%;
 }
 #article2 #photoBlock2,
 #article2 #photoBlock3 {
   left: 40%;
+  top: 75%;
 }
 #article2 #photoBlock2 .textInBlock,
 #article2 #photoBlock3 .textInBlock {
@@ -268,11 +265,13 @@ body #content #circleText {
 }
 #article2 #photoBlock3 {
   left: 65%;
+  top: 80%;
 }
 #article2 .photoBlock {
+  opacity: 0;
   position: absolute;
-  top: 10%;
-  backdrop-filter: blur(37px);
+  top: 70%;
+  backdrop-filter: blur(30px);
   width: 23%;
   height: 34%;
   text-align: center;
@@ -298,5 +297,32 @@ body #content #circleText {
   margin-left: auto;
   box-sizing: border-box;
   border-bottom: 5px solid white;
+}
+#article2 #roadMap {
+  position: absolute;
+  top: 34%;
+  left: 23%;
+  width: 65%;
+  height: 11%;
+  z-index: -2;
+  opacity: 0;
+}
+#article2 #phases {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  width: 54%;
+  height: 8%;
+  opacity: 0;
+  z-index: -2;
+}
+#article2 #phase1 {
+  position: absolute;
+  top: 64%;
+  left: 30%;
+  width: 12%;
+  height: 22%;
+  opacity: 0;
+  z-index: -2;
 }
 /*# sourceMappingURL=mainPage.css.map */
