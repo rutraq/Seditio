@@ -1,8 +1,7 @@
-let page = 3;
+let page = 1;
 let tmp = 100;
-thirdArticle();
 
-$(window).bind('mousewheel DOMMouseScroll', function(event){
+$(window).bind('mousewheel DOMMouseScroll', function (event) {
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
         if (page === 2) {
             window.scrollTo({
@@ -13,8 +12,7 @@ $(window).bind('mousewheel DOMMouseScroll', function(event){
             $("#rightBubble").animate({opacity: '1'}, 500);
             page--;
         }
-    }
-    else {
+    } else {
         if (page === 1) {
             firstArticle();
             page++;
@@ -23,6 +21,12 @@ $(window).bind('mousewheel DOMMouseScroll', function(event){
             page++;
         } else if (page === 3) {
             fourthArticle();
+            page++;
+        } else if (page === 4) {
+            fifthArticle();
+            page++;
+        } else if (page === 5) {
+            sixthArticle();
             page++;
         }
     }
@@ -43,19 +47,104 @@ function secondArticle() {
     });
 }
 
+function fifthArticle() {
+    // previous article
+    $("#roadMap").animate({left: "+=6%"}, 1000).animate({left: "-=90%", opacity: 0}, 1500, 'swing');
+    $("#phases").animate({left: "+=1%"}, 1000).animate({left: "-=60%", opacity: 0}, 1500, 'swing');
+    $("#phase1").animate({left: "+=1%"}, 1000).animate({left: "-=60%", opacity: 0}, 1500, 'swing');
+
+    let bigBubble = $("#bigBubble");
+    bigBubble.animate({left: '-=3%', top: '-=2%'}, 1000)
+        .animate({left: '+=55%', width: '+=60%', top: '-=45%'}, 2000, 'swing')
+        .animate({left: '-=10%'}, 1200, 'swing');
+    $({degrees: tmp}).animate({degrees: tmp - 10},
+        {
+            duration: 1000,
+            step: function (now) {
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: tmp + 125},
+        {
+            duration: 2000,
+            step: function (now) {
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: tmp + 105},
+        {
+            duration: 1200,
+            step: function (now) {
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        });
+    tmp += 105;
+
+    //new article
+    $("#things").animate({opacity: 0}, 1500)
+        .animate({left: '17%', opacity: 1}, 1500, 'swing')
+        .animate({left: '-=2%'}, 1200);
+    $("#marketplace").animate({opacity: 0}, 1500)
+        .animate({top: '35%', opacity: 1}, 1500, 'swing')
+        .animate({top: '+=2%'}, 1200);
+    $("#percentage1").animate({opacity: 0, top: '+=3%'}, 1500)
+        .animate({top: '-=5%', opacity: 1}, 1500, 'swing')
+        .animate({top: '+=2%'}, 1200);
+    $("#percentage2").animate({opacity: 0, top: '+=3%'}, 1500)
+        .animate({top: '-=5%', opacity: 1}, 1500, 'swing')
+        .animate({top: '+=2%'}, 1200);
+    $("#percentage3").animate({opacity: 0, top: '+=3%'}, 1500)
+        .animate({top: '-=5%', opacity: 1}, 1500, 'swing')
+        .animate({top: '+=2%'}, 1200);
+    $("#percentage4").animate({opacity: 0, top: '+=3%'}, 1500)
+        .animate({top: '-=5%', opacity: 1}, 1500, 'swing')
+        .animate({top: '+=2%'}, 1200);
+}
+
+function sixthArticle() {
+    //previous article
+    $("#things").animate({left: '-=3%'}, 1200, 'swing')
+        .animate({left: '60%', opacity: 0}, 1500, 'swing');
+    $("#marketplace").animate({left: '+=3%'}, 1200, 'swing')
+        .animate({left: '-60%', opacity: 0}, 1500, 'swing');
+    $("#percentage1").animate({opacity: 1}, 1200)
+        .animate({top: '90%', opacity: 0}, 1500, 'swing');
+    $("#percentage2").animate({top: '-=1%'}, 1200, 'swing')
+        .animate({top: '100%', opacity: 0}, 1500, 'swing');
+    $("#percentage3").animate({top: '-=2%'}, 1200, 'swing')
+        .animate({top: '120%', opacity: 0}, 1500, 'swing');
+    $("#percentage4").animate({top: '-=2%'}, 1200, 'swing')
+        .animate({top: '120%', opacity: 0}, 1500, 'swing');
+
+    let bigBubble = $("#bigBubble");
+    $({degrees: tmp}).animate({degrees: tmp + 30},
+        {
+            duration: 1200,
+            step: function (now) {
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: tmp - 130},
+        {
+            duration: 1500,
+            step: function (now) {
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        });
+    bigBubble.animate({left: '+=5%', top: '-=15%'}, 1200, 'swing')
+        .animate({left: '-130%', top: '100%'}, 1500, 'swing');
+}
+
 function thirdArticle() {
     let bigBubble = $("#bigBubble");
     $({degrees: tmp}).animate({degrees: tmp + 180},
         {
             duration: 2000,
             step: function (now) {
-                bigBubble.css({transform: 'rotate('+ now +'deg)'});
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
             }
         }).animate({degrees: tmp + 170},
         {
             duration: 1000,
             step: function (now) {
-                bigBubble.css({transform: 'rotate('+ now +'deg)'});
+                bigBubble.css({transform: 'rotate(' + now + 'deg)'});
             }
         });
     tmp += 170;
@@ -67,9 +156,9 @@ function thirdArticle() {
     }, 1000);
     $("#mainDirections").animate({opacity: 0}, 3000)
         .animate({
-        right: '15%',
-        opacity: 1
-    }, 1500).animate({right: '14%'}, 700);
+            right: '15%',
+            opacity: 1
+        }, 1500).animate({right: '14%'}, 700);
     $(".photoBlock").animate({opacity: 0}, 3000)
         .animate({
             opacity: 1,
@@ -118,19 +207,19 @@ function fourthArticle() {
         {
             duration: 800,
             step: function (now) {
-                $("#bigBubble").css({transform: 'rotate('+ now +'deg)'});
+                $("#bigBubble").css({transform: 'rotate(' + now + 'deg)'});
             }
         }).animate({degrees: tmp + 200},
         {
             duration: 2500,
             step: function (now) {
-                $("#bigBubble").css({transform: 'rotate('+ now +'deg)'});
+                $("#bigBubble").css({transform: 'rotate(' + now + 'deg)'});
             }
         }).animate({degrees: tmp + 180},
         {
             duration: 800,
             step: function (now) {
-                $("#bigBubble").css({transform: 'rotate('+ now +'deg)'});
+                $("#bigBubble").css({transform: 'rotate(' + now + 'deg)'});
             }
         });
     tmp += 180;
