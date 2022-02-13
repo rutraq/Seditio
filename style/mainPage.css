@@ -373,4 +373,52 @@ body #content #circleText {
   height: 4%;
   opacity: 0;
 }
+#article2 #logoImg {
+  position: absolute;
+  top: -50%;
+  left: 24%;
+  width: 55%;
+  height: 55%;
+  opacity: 0;
+}
+#article2 #tokenomics {
+  position: absolute;
+  top: 70%;
+  left: 18%;
+  width: 64%;
+  height: 7.5%;
+  opacity: 0;
+}
+#article2 #tokenInfo {
+  position: absolute;
+  top: 80%;
+  left: 14%;
+  width: 74%;
+  height: 8%;
+  opacity: 0;
+}
+#article2 #stayWith {
+  position: absolute;
+  top: 51%;
+  left: 0;
+  width: 74%;
+  height: 8%;
+  opacity: 0;
+}
+#article2 #professional {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  width: 53%;
+  height: 7%;
+  opacity: 0;
+}
+#background {
+  position: absolute;
+  top: 220vh;
+  left: 0;
+  width: 120vw;
+  height: 120vh;
+  z-index: -2;
+}
 /*# sourceMappingURL=mainPage.css.map */

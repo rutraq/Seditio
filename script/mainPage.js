@@ -1,5 +1,6 @@
-let page = 1;
+let page = 4;
 let tmp = 100;
+fourthArticle();
 
 $(window).bind('mousewheel DOMMouseScroll', function (event) {
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
@@ -13,6 +14,7 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
             page--;
         }
     } else {
+        $(".header").addClass('fix');
         if (page === 1) {
             firstArticle();
             page++;
@@ -27,6 +29,9 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
             page++;
         } else if (page === 5) {
             sixthArticle();
+            page++;
+        } else if (page === 6) {
+            seventhArticle();
             page++;
         }
     }
@@ -45,6 +50,27 @@ function secondArticle() {
         $("#centerBubble").addClass("rotationLeft");
         thirdArticle();
     });
+}
+
+function seventhArticle() {
+    // previous article
+    $("#tokenomics").animate({left: '+=15%', opacity: 0}, 2000);
+    $("#tokenInfo").animate({top: '+=15%', opacity: 0}, 2000);
+    let logo = $("#logoImg");
+    $({degrees: -270}).animate({degrees: -450},
+        {
+            duration: 2000,
+            step: function (now) {
+                logo.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        });
+    logo.animate({width: '6%', height: '6%', top: '4.5%', left: '47%'}, 2000,
+        function () {
+            // new article
+            $("#background").animate({top: '90%'}, 1200, 'swing');
+            $("#stayWith").animate({left: '15%', opacity: 1}, 1200, 'swing');
+            $("#professional").animate({left: '15%', opacity: 1}, 1200, 'swing');
+        });
 }
 
 function fifthArticle() {
@@ -130,6 +156,22 @@ function sixthArticle() {
         });
     bigBubble.animate({left: '+=5%', top: '-=15%'}, 1200, 'swing')
         .animate({left: '-130%', top: '100%'}, 1500, 'swing');
+    $("#logoHeader").animate({opacity: 1}, 1200).animate({opacity: 0}, 1500,
+        function () {
+            let logo = $("#logoImg");
+            logo.animate({width: '20%', height: '20%', opacity: 1, top: '19%', left: '40%'}, 1500);
+            $({degrees: 0}).animate({degrees: -270},
+                {
+                    duration: 1500,
+                    step: function (now) {
+                        logo.css({transform: 'rotate(' + now + 'deg)'});
+                    }
+                });
+
+            //new article
+            $("#tokenomics").animate({top: '-=20%', opacity: 1}, 1500);
+            $("#tokenInfo").animate({top: '-=12%', opacity: 1}, 1500);
+        });
 }
 
 function thirdArticle() {
@@ -167,6 +209,7 @@ function thirdArticle() {
 }
 
 function fourthArticle() {
+    $(".header").addClass("fix");
     $("#mainDirections").animate(
         {
             right: '+=1%'
