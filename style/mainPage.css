@@ -27,7 +27,9 @@ body #article1 {
 body #content img:first-child {
   position: absolute;
   right: -5%;
+  top: 12%;
   width: 85%;
+  z-index: -2;
 }
 body #content .bigFont,
 body #content .borderFont {
@@ -45,10 +47,11 @@ body #content .borderFont div {
   margin-bottom: 5%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+  position: relative;
 }
 body #content .bigFont div:first-child,
 body #content .borderFont div:first-child {
-  margin-left: 8%;
+  left: 8%;
   padding-left: 5%;
   border-left: 11px solid #51E8EF;
 }
@@ -71,7 +74,7 @@ body #content #rightBubble {
   right: -16%;
   top: 18%;
   width: 60%;
-  opacity: 0;
+  z-index: -1;
 }
 body #content #leftBubble {
   position: absolute;
@@ -100,7 +103,7 @@ body #content #circleText {
   width: 100vw;
 }
 .header img:nth-child(2) {
-  margin-right: 35%;
+  margin-right: 30%;
   margin-left: 45%;
 }
 .header img:first-child {
@@ -123,10 +126,11 @@ body #content #circleText {
   transition: 0.3s;
 }
 .footer {
-  position: relative;
-  top: 80%;
+  position: absolute;
+  top: 90%;
   display: flex;
   flex-direction: row;
+  width: 100vw;
 }
 .footer .buttonHeader {
   font-size: 20px;
@@ -134,8 +138,8 @@ body #content #circleText {
   letter-spacing: 0.195em;
   margin-right: 0;
   padding: 15px 65px;
-  position: absolute;
-  left: 38%;
+  position: relative;
+  left: 36%;
 }
 .footer .text {
   transform: rotate(90deg);

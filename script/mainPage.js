@@ -1,6 +1,5 @@
-let page = 4;
+let page = 1;
 let tmp = 100;
-fourthArticle();
 
 $(window).bind('mousewheel DOMMouseScroll', function (event) {
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
@@ -16,7 +15,8 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
     } else {
         $(".header").addClass('fix');
         if (page === 1) {
-            firstArticle();
+            start();
+            // firstArticle();
             page++;
         } else if (page === 2) {
             secondArticle();
@@ -36,6 +36,84 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
         }
     }
 });
+
+function start() {
+    $("#seditio").animate({left: '+=40%', opacity: 0}, 1200, 'swing');
+    $("#bigFont div:first-child").animate({left: '-=40%', opacity: 0}, 1200, 'swing');
+    $("#bigFont div:nth-child(2)").animate({left: '-=50%', opacity: 0}, 1200, 'swing');
+    $("#bigFont div:last-child").animate({left: '-=35%', opacity: 0}, 1200, 'swing');
+
+    $("#borderFont div:first-child").animate({left: '+=50%', opacity: 0}, 1200, 'swing');
+    $("#borderFont div:nth-child(2)").animate({left: '+=60%', opacity: 0}, 1200, 'swing');
+    $("#borderFont div:last-child").animate({left: '+=70%', opacity: 0}, 1200, 'swing');
+
+    $(".footer .buttonHeader").animate({marginTop: '+=15%', opacity: 0}, 1200);
+
+    let circleText = $("#circleText");
+    circleText.animate({top: '-=25%', left: '-=2%', opacity: 0}, 1200, 'swing');
+    $({degrees: 0}).animate({degrees: 100},
+        {
+            duration: 1200,
+            step: function (now) {
+                circleText.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        });
+
+    let leftBubble = $("#leftBubble");
+    leftBubble.animate({left: '+=6%', top: '-=65%', width: '+=25%'}, 1600, 'swing')
+        .animate({opacity: 1}, 300)
+        .animate({top: '+=10%'}, 1000);
+    $({degrees: 0}).animate({degrees: -100},
+        {
+            duration: 1600,
+            step: function (now) {
+                leftBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: -100},
+        {
+            duration: 300,
+            step: function (now) {
+                leftBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: -80},
+        {
+            duration: 1000,
+            step: function (now) {
+                leftBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        });
+
+    let rightBubble = $("#rightBubble");
+    rightBubble.animate({top: '-=35%', right: '-=10%'}, 1600, 'swing')
+        .animate({opacity: 1}, 300)
+        .animate({top: '+=10%'}, 1000)
+        .animate({top: '-='});
+    $({degrees: 0}).animate({degrees: 50},
+        {
+            duration: 1600,
+            step: function (now) {
+                rightBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: 50},
+        {
+            duration: 300,
+            step: function (now) {
+                rightBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: 65},
+        {
+            duration: 1000,
+            step: function (now) {
+                rightBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        }).animate({degrees: 45},
+        {
+            duration: 1500,
+            step: function (now) {
+                rightBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
+        });
+}
 
 function secondArticle() {
     $("#nftImg").animate({top: '+=5%'}, 700).animate({top: '-100%'}, 1400, 'swing');
