@@ -159,7 +159,11 @@ body {
 
 #article2 {
   height: 100vh;
-  position: relative;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 
   #centerBubble {
     position: relative;
@@ -280,11 +284,11 @@ body {
     top: 75%;
 
     .textInBlock {
-      top: 38%;
+      top: 33%;
     }
 
     .line {
-      top: 70%;
+      top: 52%;
     }
   }
 
@@ -296,7 +300,6 @@ body {
   .photoBlock {
     opacity: 0;
     position: absolute;
-    //top: 55%;
     top: 70%;
     backdrop-filter: blur(30px);
     width: 23%;
@@ -309,7 +312,7 @@ body {
       font-family: @montseratFont;
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 150%;
       line-height: 143%;
       letter-spacing: 0.09em;
       color: white;
@@ -460,7 +463,7 @@ body {
 
 #background {
   position: absolute;
-  top: 220vh;
+  top: 120vh;
   left: 0;
   width: 120vw;
   height: 120vh;

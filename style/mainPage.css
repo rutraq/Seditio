@@ -153,7 +153,11 @@ body #content #circleText {
 }
 #article2 {
   height: 100vh;
-  position: relative;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 #article2 #centerBubble {
   position: relative;
@@ -261,11 +265,11 @@ body #content #circleText {
 }
 #article2 #photoBlock2 .textInBlock,
 #article2 #photoBlock3 .textInBlock {
-  top: 38%;
+  top: 33%;
 }
 #article2 #photoBlock2 .line,
 #article2 #photoBlock3 .line {
-  top: 70%;
+  top: 52%;
 }
 #article2 #photoBlock3 {
   left: 65%;
@@ -286,7 +290,7 @@ body #content #circleText {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 150%;
   line-height: 143%;
   letter-spacing: 0.09em;
   color: white;
@@ -419,7 +423,7 @@ body #content #circleText {
 }
 #background {
   position: absolute;
-  top: 220vh;
+  top: 120vh;
   left: 0;
   width: 120vw;
   height: 120vh;

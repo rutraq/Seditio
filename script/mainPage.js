@@ -62,7 +62,11 @@ function start() {
     let leftBubble = $("#leftBubble");
     leftBubble.animate({left: '+=6%', top: '-=65%', width: '+=25%'}, 1600, 'swing')
         .animate({opacity: 1}, 300)
-        .animate({top: '+=10%'}, 1000);
+        .animate({top: '+=10%'}, 1000)
+        .animate({top: '-130%'}, 1500,
+            function () {
+                firstArticle();
+            });
     $({degrees: 0}).animate({degrees: -100},
         {
             duration: 1600,
@@ -81,13 +85,19 @@ function start() {
             step: function (now) {
                 leftBubble.css({transform: 'rotate(' + now + 'deg)'});
             }
+        }).animate({degrees: -120},
+        {
+            duration: 1500,
+            step: function (now) {
+                leftBubble.css({transform: 'rotate(' + now + 'deg)'});
+            }
         });
 
     let rightBubble = $("#rightBubble");
     rightBubble.animate({top: '-=35%', right: '-=10%'}, 1600, 'swing')
         .animate({opacity: 1}, 300)
         .animate({top: '+=10%'}, 1000)
-        .animate({top: '-='});
+        .animate({top: '-120%'}, 1500);
     $({degrees: 0}).animate({degrees: 50},
         {
             duration: 1600,
@@ -106,7 +116,7 @@ function start() {
             step: function (now) {
                 rightBubble.css({transform: 'rotate(' + now + 'deg)'});
             }
-        }).animate({degrees: 45},
+        }).animate({degrees: 30},
         {
             duration: 1500,
             step: function (now) {
@@ -145,7 +155,7 @@ function seventhArticle() {
     logo.animate({width: '6%', height: '6%', top: '4.5%', left: '47%'}, 2000,
         function () {
             // new article
-            $("#background").animate({top: '90%'}, 1200, 'swing');
+            $("#background").animate({top: '-10%'}, 1200, 'swing');
             $("#stayWith").animate({left: '15%', opacity: 1}, 1200, 'swing');
             $("#professional").animate({left: '15%', opacity: 1}, 1200, 'swing');
         });
@@ -365,11 +375,6 @@ function fourthArticle() {
 }
 
 function firstArticle() {
-    window.scrollTo({
-        top: window.innerHeight,
-        left: 0,
-        behavior: 'smooth'
-    });
     $(".header").addClass("fix");
     $("#rightBubble").animate({opacity: '0'}, 500);
     $("#centerBubble").addClass('rotation');
