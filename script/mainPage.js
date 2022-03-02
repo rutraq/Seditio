@@ -1,38 +1,56 @@
 let page = 1;
 let tmp = 100;
+let scroll = true;
 
 $(window).bind('mousewheel DOMMouseScroll', function (event) {
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        if (page === 2) {
-            window.scrollTo({
-                top: -window.innerHeight,
-                left: 0,
-                behavior: 'smooth'
-            });
-            $("#rightBubble").animate({opacity: '1'}, 500);
-            page--;
-        }
+        // if (page === 2) {
+        //     window.scrollTo({
+        //         top: -window.innerHeight,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     });
+        //     $("#rightBubble").animate({opacity: '1'}, 500);
+        //     page--;
+        // }
     } else {
         $(".header").addClass('fix');
         if (page === 1) {
-            start();
-            // firstArticle();
-            page++;
+            if (scroll) {
+                scroll = false;
+                start();
+                page++;
+            }
         } else if (page === 2) {
-            secondArticle();
-            page++;
+            if (scroll) {
+                scroll = false;
+                secondArticle();
+                page++;
+            }
         } else if (page === 3) {
-            fourthArticle();
-            page++;
+            if (scroll) {
+                scroll = false;
+                fourthArticle();
+                page++;
+            }
         } else if (page === 4) {
-            fifthArticle();
-            page++;
+            if (scroll) {
+                scroll = false;
+                fifthArticle();
+                page++;
+            }
         } else if (page === 5) {
-            sixthArticle();
-            page++;
+            if (scroll) {
+                scroll = false;
+                sixthArticle();
+                page++;
+            }
         } else if (page === 6) {
-            seventhArticle();
-            page++;
+            if (scroll) {
+                scroll = false;
+                seventhArticle();
+                page++;
+            }
         }
     }
 });
@@ -157,7 +175,10 @@ function seventhArticle() {
             // new article
             $("#background").animate({top: '-10%'}, 1200, 'swing');
             $("#stayWith").animate({left: '15%', opacity: 1}, 1200, 'swing');
-            $("#professional").animate({left: '15%', opacity: 1}, 1200, 'swing');
+            $("#professional").animate({left: '15%', opacity: 1}, 1200, 'swing',
+                function () {
+                    scroll = true;
+                });
         });
 }
 
@@ -210,7 +231,10 @@ function fifthArticle() {
         .animate({top: '+=2%'}, 1200);
     $("#percentage4").animate({opacity: 0, top: '+=3%'}, 1500)
         .animate({top: '-=5%', opacity: 1}, 1500, 'swing')
-        .animate({top: '+=2%'}, 1200);
+        .animate({top: '+=2%'}, 1200,
+            function () {
+                scroll = true;
+            });
 }
 
 function sixthArticle() {
@@ -258,7 +282,10 @@ function sixthArticle() {
 
             //new article
             $("#tokenomics").animate({top: '-=20%', opacity: 1}, 1500);
-            $("#tokenInfo").animate({top: '-=12%', opacity: 1}, 1500);
+            $("#tokenInfo").animate({top: '-=12%', opacity: 1}, 1500,
+                function () {
+                    scroll = true;
+                });
         });
 }
 
@@ -293,7 +320,10 @@ function thirdArticle() {
         .animate({
             opacity: 1,
             top: '54%'
-        }, 1500).animate({top: '55%'}, 700);
+        }, 1500).animate({top: '55%'}, 700,
+        function () {
+            scroll = true;
+        });
 }
 
 function fourthArticle() {
@@ -371,7 +401,10 @@ function fourthArticle() {
         {
             left: '-80%'
         }, 800, 'swing'
-    );
+    ,
+        function () {
+            scroll = true;
+        });
 }
 
 function firstArticle() {
@@ -381,7 +414,10 @@ function firstArticle() {
     $("#nftImg").animate({
         opacity: 1,
         top: '15%'
-    }, 1500);
+    }, 1500,
+        function () {
+            scroll = true;
+        });
 
     $("#smart").animate({
         right: '20%',
