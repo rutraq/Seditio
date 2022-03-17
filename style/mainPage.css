@@ -18,7 +18,7 @@
 }
 body {
   background: linear-gradient(90deg, #152331 0%, #000000 100%);
-  font-family: Manverse, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
 body #article1 {
@@ -45,7 +45,6 @@ body #content .borderFont {
 body #content .bigFont div,
 body #content .borderFont div {
   margin-bottom: 5%;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   position: relative;
 }
@@ -124,6 +123,8 @@ body #content #circleText {
 .buttonHeader:hover {
   transform: scale(1.03);
   transition: 0.3s;
+  background-color: #51E8EF;
+  color: black;
 }
 .footer {
   position: absolute;
@@ -147,7 +148,6 @@ body #content #circleText {
   font-size: 16px;
   line-height: 14px;
   letter-spacing: 0.195em;
-  font-family: 'Montserrat', sans-serif;
   position: absolute;
   right: -1%;
 }
@@ -287,7 +287,6 @@ body #content #circleText {
   box-sizing: border-box;
 }
 #article2 .photoBlock .textInBlock {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 150%;
