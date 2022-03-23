@@ -2,7 +2,7 @@
 
 body {
   background: linear-gradient(90deg, #152331 0%, #000000 100%);
-  font-family: @manverseFont;
+  font-family: @montseratFont;
   overflow: hidden;
 
   #article1 {
@@ -30,7 +30,6 @@ body {
 
       div {
         margin-bottom: 5%;
-        font-family: @montseratFont;
         font-weight: 900;
         position: relative;
       }
@@ -125,6 +124,8 @@ body {
   &:hover {
     transform: scale(1.03);
     transition: .3s;
+    background-color: #51E8EF;
+    color: black;
   }
 }
 
@@ -151,7 +152,6 @@ body {
     font-size: 16px;
     line-height: 14px;
     letter-spacing: 0.195em;
-    font-family: @montseratFont;
     position: absolute;
     right: -1%;
   }
@@ -288,7 +288,7 @@ body {
     }
 
     .line {
-      top: 70%;
+      top: 52%;
     }
   }
 
@@ -309,7 +309,6 @@ body {
     box-sizing: border-box;
 
     .textInBlock {
-      font-family: @montseratFont;
       font-style: normal;
       font-weight: bold;
       font-size: 150%;
@@ -471,9 +470,5 @@ body {
 }
 
 @media all and (max-width: 1550px) {
-  #photoBlock2, #photoBlock3 {
-    .line {
-      top: 52%;
-    }
-  }
+
 }
