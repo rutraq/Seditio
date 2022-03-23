@@ -269,7 +269,7 @@ body #content #circleText {
 }
 #article2 #photoBlock2 .line,
 #article2 #photoBlock3 .line {
-  top: 70%;
+  top: 52%;
 }
 #article2 #photoBlock3 {
   left: 65%;
@@ -427,11 +427,5 @@ body #content #circleText {
   width: 120vw;
   height: 120vh;
   z-index: -2;
-}
-@media all and (max-width: 1550px) {
-  #photoBlock2 .line,
-  #photoBlock3 .line {
-    top: 52%;
-  }
 }
 /*# sourceMappingURL=mainPage.css.map */
