@@ -7,14 +7,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
 }
 body {
   background: linear-gradient(90deg, #152331 0%, #000000 100%);
@@ -119,6 +119,7 @@ body #content #circleText {
   border: 2px solid #51E8EF;
   cursor: pointer;
   transition: 0.4s;
+  text-decoration: none;
 }
 .buttonHeader:hover {
   transform: scale(1.03);
@@ -274,6 +275,12 @@ body #content #circleText {
 #article2 #photoBlock3 {
   left: 65%;
   top: 80%;
+}
+@media all and (min-width: 1551px) {
+  #article2 #photoBlock2 .line,
+  #article2 #photoBlock3 .line {
+    top: 70%;
+  }
 }
 #article2 .photoBlock {
   opacity: 0;

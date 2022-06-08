@@ -1,0 +1,43 @@
+@import "variables";
+
+body {
+  background: linear-gradient(90deg, #152331 0%, #000000 100%);
+  font-family: @montseratFont;
+
+  video {
+    width: 50vw;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+  }
+
+  .goBackButton, .goToTrello {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.195em;
+    padding: 12px 25px;
+    border: 2px solid #51E8EF;
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.03);
+      transition: .3s;
+      background-color: #51E8EF;
+      color: black;
+    }
+  }
+
+  .goBackButton {
+    top: 2%;
+  }
+
+  .goToTrello {
+    bottom: 5%;
+    left: 45%;
+  }
+}
